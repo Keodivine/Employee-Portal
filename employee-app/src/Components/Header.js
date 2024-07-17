@@ -6,7 +6,7 @@ const Header = ({ onSearch }) => {
       <h1>Employee Management Portal</h1>
       <input
         type="text"
-        placeholder="Search by name or position"
+        placeholder="Search by name, surname, ID, or department"
         onChange={(e) => onSearch(e.target.value)}
       />
     </header>

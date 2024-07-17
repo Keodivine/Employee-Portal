@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Header from './Components/Header.js';
 import EmployeeList from './Components/EmployeeList.js';
 import EmployeeForm from './Components/EmployeeForm.js';
+import Sidebar from './Components/Sidebar.js';
 import './App.css';
 
-const App = () => {
+ const App = () => {
   const [employees, setEmployees] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [editingEmployee, setEditingEmployee] = useState(null);
@@ -41,12 +42,15 @@ const App = () => {
 
   const filteredEmployees = employees.filter(emp =>
     emp.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    emp.position.toLowerCase().includes(searchTerm.toLowerCase())
+    emp.surname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    emp.id.toString().includes(searchTerm) ||
+    emp.department.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="App">
       <Header onSearch={handleSearch} />
+      <Sidebar/>
       <EmployeeForm
         addOrUpdateEmployee={addOrUpdateEmployee}
         editingEmployee={editingEmployee}

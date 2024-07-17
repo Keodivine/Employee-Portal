@@ -38,9 +38,7 @@ const EmployeeForm = ({ addOrUpdateEmployee, editingEmployee }) => {
 
   return (
     <form className="employee-form" onSubmit={handleSubmit}>
-         <label>First Name:</label>
       <input
-       
         type="text"
         name="name"
         placeholder="Name"
@@ -48,7 +46,6 @@ const EmployeeForm = ({ addOrUpdateEmployee, editingEmployee }) => {
         onChange={handleChange}
         required
       />
-       <label>Surname:</label>
       <input
         type="text"
         name="surname"
@@ -57,9 +54,7 @@ const EmployeeForm = ({ addOrUpdateEmployee, editingEmployee }) => {
         onChange={handleChange}
         required
       />
-       <label>Email Address:</label>
       <input
-      
         type="email"
         name="email"
         placeholder="Email"
@@ -67,7 +62,6 @@ const EmployeeForm = ({ addOrUpdateEmployee, editingEmployee }) => {
         onChange={handleChange}
         required
       />
-       <label>Position:</label>
       <input
         type="text"
         name="position"
@@ -76,7 +70,6 @@ const EmployeeForm = ({ addOrUpdateEmployee, editingEmployee }) => {
         onChange={handleChange}
         required
       />
-       <label>Department:</label>
       <input
         type="text"
         name="department"
@@ -85,7 +78,6 @@ const EmployeeForm = ({ addOrUpdateEmployee, editingEmployee }) => {
         onChange={handleChange}
         required
       />
-       <label>First Name:</label>
       <input
         type="tel"
         name="phone"
