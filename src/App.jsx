@@ -50,7 +50,7 @@ import './App.css';
   return (
     <div className="App">
       <Header onSearch={handleSearch} />
-      <Sidebar/>
+      
       <EmployeeForm
         addOrUpdateEmployee={addOrUpdateEmployee}
         editingEmployee={editingEmployee}
